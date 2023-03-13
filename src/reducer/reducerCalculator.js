@@ -11,6 +11,7 @@ export function reducerCalculator(state, {type, payload}) {
                     currentOperand: payload.digit, 
                     overwrite: false
                 }
+                
             };
             if (payload.digit === '0' && state.currentOperand === '0') return state;
             if (payload.digit === '.' && String(state.currentOperand).includes('.')) return state;
